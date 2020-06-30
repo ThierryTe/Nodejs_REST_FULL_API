@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
-
+//declaration du model des Post
 const PostSchema = new Schema({
   image: { type: String, required: true },
   description: { type: String, required: true },

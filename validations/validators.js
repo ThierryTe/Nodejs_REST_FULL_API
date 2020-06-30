@@ -1,5 +1,7 @@
 const { body } = require("express-validator/check");
 
+
+//gestion des contraintes sur les champs
 exports.hasDescription = body("description")
   .isLength({ min: 5 })
   .withMessage("La description est obligatoire. Elle doit être composée de 5 caractères au minimum");

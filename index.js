@@ -9,6 +9,7 @@ const config = require("./config");
 const passportJWT = require("./middlewares/passportJWT")();
 const errorHandler = require("./middlewares/errorHandler");
 const app = express();
+
 //déclaration des routes
 const postRoutes = require("./routes/post");
 const authRoutes = require("./routes/auth");
@@ -16,14 +17,6 @@ const followRoutes = require("./routes/follow");
 
 app.use(cors());
 
-/* app.enable("trust proxy");
-const limiter = rateLimit({
-  windowMs: 10 * 1000, // 10 secondes
-  max: 5 // limit each IP to 5 requests per windowMs
-});
- 
-//  apply to all requests
-app.use(limiter); */
 
 mongoose.Promise = global.Promise;
 
